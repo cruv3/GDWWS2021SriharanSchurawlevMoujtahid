@@ -1,3 +1,1 @@
-console.log("Hello World");
-
-console.log("Hello GitHUB")
+console.log("Hallo, ich Meister euer bin! Ich Meister Yoda sein");
