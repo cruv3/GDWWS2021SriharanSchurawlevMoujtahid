@@ -1,4 +1,1 @@
-class Bibliothek
-{
-    String name;
-}
+class Bibliothek{name = new String;}
