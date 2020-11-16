@@ -1,0 +1,4 @@
+class Bibliothek
+{
+    String name;
+}
