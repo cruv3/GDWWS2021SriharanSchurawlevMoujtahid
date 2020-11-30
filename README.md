@@ -7,8 +7,8 @@ Goatham <br>
 
 # Dev Logs
 
-23.11.20 -> Domainmodel
-30.11.20 -> Neue Idee | Domainmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario
+23.11.20 -> Domänenmodell <br>
+30.11.20 -> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario
 
 
 # Project Description
@@ -22,7 +22,7 @@ Waracheck spielt eine größere Rolle, wenn Sie es hassen, große Mengen an Papi
 3. Order(Order, POST)
 4. View Historie(Historie, GET)
 
-# Domain Modell
+# Domänenmodell
 ## 1.0
 ![alt text](https://i.ibb.co/416gGj2/Domain.png)
 # Klassenmodell
