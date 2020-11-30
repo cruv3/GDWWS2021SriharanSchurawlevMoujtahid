@@ -25,10 +25,10 @@ Waracheck is a application that helps you to have all your Products in good eye.
 
 # Domain Modell
 ## 1.0
-![alt text](https://ibb.co/6X3Jx48)
+![alt text](https://i.ibb.co/416gGj2/Domain.png)
 # Klassenmodell
 ## 1.0
-![alt text](https://ibb.co/cYLQZfW)
+![alt text](https://i.ibb.co/RjycsrX/Klassenmodell.png)
 # Restbucks
 ## 1.0
-![alt text](https://ibb.co/BTvKN4R)
+![alt text](https://i.ibb.co/0Y1VtB3/Restbucks.png)
