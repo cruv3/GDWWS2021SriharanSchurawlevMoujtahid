@@ -12,6 +12,8 @@ Goatham <br>
 
 # Project Description
 
+Waracheck is a application that helps you to have all your Products in good eye....
+
 # Manuel
 
 # Domain Modell
