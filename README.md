@@ -15,14 +15,12 @@ Goatham <br>
 Mit dem Webservice Waracheck können Sie auf die Produktgarantien achten. Sie werden vor Ablauf der Garantie benachrichtigt und erhalten einen Überblick über die Rechnungen.
 Waracheck spielt eine größere Rolle, wenn Sie es hassen, große Mengen an Papierrechnungen aufzubewahren und wenn Sie vergesslich sind.
 
-Mit dem Webservice Waracheck können Sie auf die Produktgarantien achten. Sie werden vor Ablauf der Garantie benachrichtigt und erhalten einen Überblick über die Rechnungen.
-Waracheck spielt eine größere Rolle, wenn Sie es hassen, große Mengen an Papierrechnungen aufzubewahren und wenn Sie vergesslich sind.
-
 # Manuel
 ## Basic scenario:
-1. Create User*(Users,POST)
-2. Log in*(Token, POST)
-3. View Historie*(Historie, GET)
+1. Create User(Users,POST)
+2. Log in(Token, POST)
+3. Order(Order, POST)
+4. View Historie(Historie, GET)
 
 # Domain Modell
 ## 1.0
