@@ -1,7 +1,21 @@
 # GDWWS2021AndreasAbdellGoutham
 
-16.11.2020
+# Group Members
+-Andreas Schurawlev
+-Abdelbasset Moujtahid
+-Goatham
 
-Idee: Bibliothek
-Klassen erstellt
-Domaenmodell
+# Dev Logs
+
+30.11.20
+
+
+# Project Description
+
+# Manuel
+
+# Domain Modell
+
+# Klassenmodel
+
+
