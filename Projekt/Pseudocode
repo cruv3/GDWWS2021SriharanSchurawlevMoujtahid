@@ -1,0 +1,165 @@
+#Scenario:
+1.	User registriert sich
+2.	User loggt sich ein
+3.	User geht auf Historie
+4.	User gibt Artikelnummer in suchleiste ein
+5.	Waehlt die Ware aus.
+6.	Waehlt den Haendler aus wo gekauft wurde
+7.	Gibt Kaufdatum ein
+8.	Uploaded Rechnung(optional)
+9.	Zeit vergeht, 1 Jahr
+10.	Artikel 2 geht kaputt
+11.	Prueft seine gekauften Artikel
+12.	Waelt Artikel 2 aus
+13.	Klickt button um zum Kundenservice vom Haendler zu gelangen
+
+#Pseudo-Code:
+
+//Scenario Pseudocode
+begin
+Register Pseudocode
+Login Pseudocode
+User clicks on Historie button
+Insert Artikel
+Insert Artikel 2
+Insert Artikel 3
+Checks Historie
+Chooses Aritkel 2
+Click Button // Sends you to the Service for repair on the Haendler-Site
+
+
+		
+
+// Insert Artikel
+begin
+
+	produkt.added := false
+	question := false
+	artikellist = mutablelistof<Artikelname><Haendler>
+	historielist = mutabelistof<Artikel><BuyDate>
+
+
+	print(“Insert Artikelnummer”)
+	readln(insert_artikelnummer) // Input
+	
+	if inser_artikelnummer = artikelnummer.Databank then
+		print(„You want to add this Produkt to your Historie?“)
+		read(yes or no) // Input
+		if yes then
+			produkt.added := true
+		else
+			produkt.added := false
+		end if
+
+	if produkt.added = true then
+		print(“Enter Buydate”)
+		read(insert_date) // Input d.m.y
+		historielist.add(insert_artikelnummer,insert_date)
+		question := true
+	else
+		exit
+	end if
+
+if question = true then
+	print(“From which Haendler did you buy your product”)
+	read(input_haendler)
+artikelist.add(input_artikelnummer, input_haendler)
+		print(“Do you want to add the Reciept for convenience benefit”)
+		read(yes or no)
+		if yes
+			add Reciept as pdf
+		else
+			exit
+		end if
+	
+
+// Register Pseudocode
+begin
+
+valid_input_username := false
+	valid_input_password := false
+	valid_input_e-mail := false
+	valid_registration := false
+	
+	
+	print(“Welcome to Warchecker”)
+	print(“Please Register to use all the functions”)
+
+	print(“Enter E-Mail”)
+	readln(input_e-mail) // input
+print(“Enter Username”)
+	readln(input_username) // input
+print(“Enter password”)
+	readln(input_password) // input
+
+	if input_e-mail is not already registered in Login_Databank then
+ 		valid_input_e-mail := true
+	
+		if input_username is not already registered in Login_Databank then
+			valid_input_username := true
+		
+			if input_password has 8char then
+				valid_input_password := true
+				valid_registration := true
+				
+			else
+			 	valid_input_password := false
+				print(“Password ist nicht der Norm”)
+			end if
+		else
+			valid_input_username := false
+			print(“Username schon vorhanden, bitte aendern”)
+		end if
+	else
+		valid_input_e-mail := false
+		print(“E-Mail bereits regestriert”)
+	end if
+
+if valid_registration = true then
+	print(“Registration was completed”)
+	insert_Login_Databank(input_email, input_username, input_password)
+end if
+
+
+// Login Pseudocode
+begin
+
+	valid_input_username := false
+	valid_input_password := false
+	logged_in := false
+
+	while (logged_in = false) do
+	begin 
+		print(“Enter Username”) // Input
+		readln(input_username)
+print(“Enter Password”) // Input
+		readln(input_password)
+	
+	if input_username is in Login_Databank then
+		valid_input_username := true
+		
+			if input_username is in Login_Databank then
+valid_input_password := true // pw and username are both matched
+
+                			logged_in := true
+			else
+				valid_input_password := false // PW didn’t match username
+				logged_in := false
+				print(“Username or Password was invalid”)
+			end if
+	else
+		valid_input_username := false // Username couldn’t be found in Login_Databank
+		logged_in := false
+print(“Username or Password was invalid”)
+end if
+end while
+
+if logged_in = true then
+	print(“You have been logged in”)
+else
+	print(“Loggin Failed due to wrong Username or Password”)
+	end if
+end
+
+
+
