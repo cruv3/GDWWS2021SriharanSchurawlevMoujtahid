@@ -7,11 +7,14 @@
 6.	Waehlt den Haendler aus wo gekauft wurde
 7.	Gibt Kaufdatum ein
 8.	Uploaded Rechnung(optional)
-9.	Zeit vergeht, 1 Jahr
-10.	Artikel 2 geht kaputt
-11.	Prueft seine gekauften Artikel
-12.	Waelt Artikel 2 aus
-13.	Klickt button um zum Kundenservice vom Haendler zu gelangen
+
+#Scenario 2:
+1.	Zeit vergeht, 1 Jahr
+2.	Artikel 2 geht kaputt
+3.	Loggt sich ein
+4.	Prueft alle seine gekauften Artikel
+5.	Waelt Artikel 2 aus
+6.	Klickt button um zum Kundenservice vom Haendler zu gelangen
 
 #Pseudo-Code:
 
@@ -23,10 +26,15 @@ User clicks on Historie button
 Insert Artikel
 Insert Artikel 2
 Insert Artikel 3
+end
+
+#Pseudo-Code 2:
+begin
+Login Pseudocode
 Checks Historie
 Chooses Aritkel 2
 Click Button // Sends you to the Service for repair on the Haendler-Site
-
+end
 
 		
 
@@ -71,6 +79,8 @@ artikelist.add(input_artikelnummer, input_haendler)
 		else
 			exit
 		end if
+		
+end
 	
 
 // Register Pseudocode
@@ -115,10 +125,11 @@ print(“Enter password”)
 		print(“E-Mail bereits regestriert”)
 	end if
 
-if valid_registration = true then
-	print(“Registration was completed”)
-	insert_Login_Databank(input_email, input_username, input_password)
-end if
+	if valid_registration = true then
+		print(“Registration was completed”)
+		insert_Login_Databank(input_email, input_username, input_password)
+	end if
+end
 
 
 // Login Pseudocode
