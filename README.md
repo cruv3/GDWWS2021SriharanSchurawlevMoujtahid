@@ -19,8 +19,9 @@ Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarant
 ## Basic scenario:
 1. Create User(Users,POST)
 2. Log in(Token, POST)
-3. Insert(Insert, POST)
-4. View Historie(Historie, GET)
+3. ViewProduct(Menu, GET)
+4. Order(Order, POST)
+5. View Historie(Historie, GET)
 
 # Domänenmodell
 ## 1.0
