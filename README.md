@@ -7,13 +7,13 @@ Goutham Sriharan <br>
 
 # Dev Logs
 
-23.11.20 -> Domänenmodell <br>
-30.11.20 -> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept
+23.11.20 <br> Domänenmodell <br>
+30.11.20 <br> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept <br>
+07.12.20 <br> Ideenerweiterung | Readme aktuallisiert | Klassenmodell/Domainmodell/RESTbucks angepasst |<br>
 
 
 # Project Description
-Mit dem Webservice Waracheck können Sie auf die Produktgarantien achten. Sie werden vor Ablauf der Garantie benachrichtigt und erhalten einen Überblick über die Rechnungen.
-Waracheck spielt eine größere Rolle, wenn Sie es hassen, große Mengen an Papierrechnungen aufzubewahren und wenn Sie vergesslich sind.
+Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarantien achten. Sie werden vor Ablauf der Garantie benachrichtigt und erhalten einen Überblick über die Rechnungen. Waracheck spielt eine größere Rolle, wenn Sie es hassen, große Mengen an Papierrechnungen aufzubewahren und wenn Sie vergesslich sind. Waracheck arbeitet mit unterschiedlichen Partnern zusammen und bietet dem Nutzer günstigste Angebote. 
 
 # Manuel
 ## Basic scenario:
