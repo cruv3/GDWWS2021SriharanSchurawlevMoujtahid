@@ -1,0 +1,55 @@
+##Anwendungslogik | Waracheck
+
+#Dienstgeber
+
+Wenn ein Nutzer erfolgreich ein Post auf einer Ressource wie z.Bsp. Kaufen gemacht hat, 
+wird eine neue Instanz erzeugt die dabei eine ID generiert. Somit kann man alle Einkäufe einem 
+spezifischen Kunden zuordnen, heißt jedem Kunde einen Rechnungsverlauf mit oder ohne Garantien. 
+
+Die von den Shops gelieferten Daten werden durch die Waracheck Datenredaktion um technische Details, Testurteile, Bilder und Videos erweitert und auf der Seite dargestellt. 
+
+Die Produkte werden standardmäßig nach Popularität sortiert, können aber auch nach Preisen, Lieferzeiten und Rücksendekosten gefiltert werden. 
+Dabei wird der günstigste Gesamtpreis hervorgehoben dargestellt. Auch gebrauchte Waren können über die Plattform gefunden werden. 
+Diese werden allerdings gesondert ausgezeichnet, damit keine Verzerrung der Preise stattfindet. 
+
+
+#Dienstnutzer
+
+Nutzer können ein bestimmtes Produkt suchen, oder eine Produktkategorie nach Eigenschaften filtern. 
+Zu Produkten werden Testergebnisse, Nutzermeinungen, Preisverlauf und Datenblätter zur Verfügung gestellt.
+Nutzer können über den Checkout jeweils einen der gewünschten Produkte kaufen (erfolgt durch Weiterleitung auf Partner-Seite(sehe Externe Web Service)).
+
+Der Nutzer kann Garantie der gekauften Produkte prüfen und alle Rechnungen bei Belangen drucken.
+
+Der Nutzer wird kurz vor Ablauf der Garantie benachrichtigt.
+
+
+#Externe Web Service (API) 
+
+Der Nutzer wird beim Einkauf der Produkte auf die dazugehörige Seite unser Partner weitergeleitet.
+Jedoch übernehmen wir die Kommunikation und die Datenübermittlung (Payment-Method, Produkte, Preise, Garantie usw.).
+
+##Proof of Concept
+
+#Beschreibung
+
+Produktabfrage eines Nutzers um ihm die besten Verkäufer zu zeigen, des weiteren wird die Produktabfrage benutzt um den Kunden
+andere Produkte anzuzeigen von anderen Verkäufern anzuzeigen.
+Abfrage der Historie: Nutzer haben sowohl Zugriff auf Verlauf der Einkäufe, in einer Chronologischen Reihenfolge, 
+als auch auf deren Rechnungen.
+
+#Exit-Kriterien
+
+Erfolgreicher Kauf eines Produkts.
+Hinterlegung der Rechnungen.
+
+#Fail-Kriterien
+
+•	Kein ausgewählter Produkt
+•	Kein Internet
+•	Nicht zulässige Zahlungsmethode
+•   Produkt gibt es nicht
+
+#Fallbacks
+
+Benutze die Historie, um herauszufinden welche Produkte gekauft wurden, und das Zeitintervall der Garantie im Blick behalten. 

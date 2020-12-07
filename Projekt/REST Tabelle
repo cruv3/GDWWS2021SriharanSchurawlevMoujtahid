@@ -21,7 +21,7 @@
 
 
 #Ressourcen
-Die Ressourcendefinition wurde von unserem überarbeitetem Domeinmodell sowie unserer Projektbeschreibung abgeleitet.
+Die Ressourcendefinition wurde von unserem überarbeitetem Domainmodell sowie unserer Projektbeschreibung abgeleitet.
 
 Ein Kunde fügt sein Produkt in die Historie ein, kann diese daraufhin Prüfen, die Rechnung hinzufuegen und bei defekt des Produktes einen Fehler melden.
 
