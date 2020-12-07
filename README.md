@@ -8,7 +8,7 @@ Goutham Sriharan <br>
 # Dev Logs
 
 23.11.20 -> Domänenmodell <br>
-30.11.20 -> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept
+30.11.20 -> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept <br>
 07.12.20 -> Ideenerweiterung | Readme aktuallisiert | Klassenmodell/Domainmodell/RESTbucks angepasst |
 
 
