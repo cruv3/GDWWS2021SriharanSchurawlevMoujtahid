@@ -19,7 +19,7 @@ Waracheck spielt eine größere Rolle, wenn Sie es hassen, große Mengen an Papi
 ## Basic scenario:
 1. Create User(Users,POST)
 2. Log in(Token, POST)
-3. Order(Order, POST)
+3. Insert(Insert, POST)
 4. View Historie(Historie, GET)
 
 # Domänenmodell
