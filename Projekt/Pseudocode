@@ -1,19 +1,19 @@
 #Scenario:
 1.	User registriert sich
 2.	User loggt sich ein
-3.	User geht auf Historie
-4.	User gibt Artikelnummer in suchleiste ein
+4.	User gibt Artikelnummer/Produkt in suchleiste ein
 5.	Waehlt die Ware aus.
-6.	Waehlt den Haendler aus wo gekauft wurde
-7.	Gibt Kaufdatum ein
-8.	Uploaded Rechnung(optional)
+6.	Waehlt den Haendler aus wo gekauft werden moechte
+7.	Wird weitergeleitet und bestellt das Produkt
+7.	User prueft in der Historie nach dem Produkt
+
 
 #Scenario 2:
 1.	Zeit vergeht, 1 Jahr
-2.	Artikel 2 geht kaputt
+2.	Produkt geht kaputt
 3.	Loggt sich ein
 4.	Prueft alle seine gekauften Artikel
-5.	Waelt Artikel 2 aus
+5.	Waelt Defektes Produkt aus
 6.	Klickt button um zum Kundenservice vom Haendler zu gelangen
 
 #Pseudo-Code:
@@ -22,65 +22,20 @@
 begin
 Register Pseudocode
 Login Pseudocode
-User clicks on Historie button
-Insert Artikel
-Insert Artikel 2
-Insert Artikel 3
+Searches Product
+Order Product
+Goes to Historie
 end
 
 #Pseudo-Code 2:
 begin
 Login Pseudocode
 Checks Historie
-Chooses Aritkel 2
-Click Button // Sends you to the Service for repair on the Haendler-Site
+Chooses defekt Produkt
+Click Defekt-Button // Sends you to the Service for repair on the Haendler-Site
 end
 
 		
-
-// Insert Artikel
-begin
-
-	produkt.added := false
-	question := false
-	artikellist = mutablelistof<Artikelname><Haendler>
-	historielist = mutabelistof<Artikel><BuyDate>
-
-
-	print(“Insert Artikelnummer”)
-	readln(insert_artikelnummer) // Input
-	
-	if inser_artikelnummer = artikelnummer.Databank then
-		print(„You want to add this Produkt to your Historie?“)
-		read(yes or no) // Input
-		if yes then
-			produkt.added := true
-		else
-			produkt.added := false
-		end if
-
-	if produkt.added = true then
-		print(“Enter Buydate”)
-		read(insert_date) // Input d.m.y
-		historielist.add(insert_artikelnummer,insert_date)
-		question := true
-	else
-		exit
-	end if
-
-if question = true then
-	print(“From which Haendler did you buy your product”)
-	read(input_haendler)
-artikelist.add(input_artikelnummer, input_haendler)
-		print(“Do you want to add the Reciept for convenience benefit”)
-		read(yes or no)
-		if yes
-			add Reciept as pdf
-		else
-			exit
-		end if
-		
-end
 	
 
 // Register Pseudocode
