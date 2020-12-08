@@ -27,7 +27,7 @@ Der Nutzer wird kurz vor Ablauf der Garantie benachrichtigt.
 #Externe Web Service (API) 
 
 Der Nutzer wird beim Einkauf der Produkte auf die dazugehörige Seite unser Partner weitergeleitet.
-Jedoch übernehmen wir die Kommunikation und die Datenübermittlung (Payment-Method, Produkte, Preise, Garantie usw.).
+Jedoch übernehmen wir die Kommunikation und die Datenübermittlung per XML (Payment-Method, Produkte, Preise, Garantie usw.).
 
 ##Proof of Concept
 
@@ -48,7 +48,7 @@ Hinterlegung der Rechnungen.
 •	Kein ausgewählter Produkt
 •	Kein Internet
 •	Nicht zulässige Zahlungsmethode
-•   Produkt gibt es nicht
+• Produkt gibt es nicht
 
 #Fallbacks
 
