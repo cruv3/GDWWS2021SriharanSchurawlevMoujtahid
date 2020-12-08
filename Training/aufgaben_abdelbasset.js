@@ -4,7 +4,7 @@ console.log("Abdelbasset");
 
 //Aufgabe 2-5
 const readline = require('readline');
-const read1 = ausgabe.createInterface({input: process.stdin, output: process.stdout});
+const read1 = readline.createInterface({input: process.stdin, output: process.stdout});
 
 function getRandom(max)
 {
@@ -39,6 +39,18 @@ const random = function(callback) //Rückruffunktion, wird nach Baum() ausgefüh
         console.log("The user" + i + "has given" + random + "stars"); 
     }
     callback(("The application got the rating of" + Math.round(bewertung / i*10)/10 + "stars out of" + max_Bewertung));
-    read1.close()
+
 }
+//Nachricht ausgeben
+const log = function(message){console.log(message)}
+//Die Berechnung auslagern
+const calculate = myArr => 
+{
+    var summe = myArr.reduce( (a, b) => a+b);
+    var aver = summe / myBewertung.length;
+    callback(" The average rating is " + aver);
+};
+read1.close()
 Baum()
+//He was trying to buy more sand for his hour glass.
+//Irgendwo is noch ein Fehler ich schaue morgen mal rein
