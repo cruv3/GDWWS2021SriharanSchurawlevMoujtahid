@@ -3,7 +3,7 @@
 console.log("Abdelbasset");
 
 //Aufgabe 2-5
-const ausgabe = require('ausgabe');
+const readline = require('readline');
 const read1 = ausgabe.createInterface({input: process.stdin, output: process.stdout});
 
 function getRandom(max)
