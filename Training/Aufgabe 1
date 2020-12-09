@@ -21,7 +21,7 @@ const Start = function()
       switch(parseInt(x))
       {
             case 1:
-                    me(log);
+                    bewerten(log);
                     break;
 
             case 2:
@@ -74,7 +74,7 @@ var question = (q) =>
   });
 };
 
-const me = async function eingabe(callback)
+const bewerten = async function eingabe(callback)
 {
   var x;
   const myArr = [];
