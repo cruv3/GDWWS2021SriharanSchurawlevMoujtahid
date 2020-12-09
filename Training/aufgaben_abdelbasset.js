@@ -1,119 +1,117 @@
-//Alle Aufgaben 
-//Mit console.log den Namen ausgeben
-console.log("AsSalamu'aleykum Abdelbasset!");
+console.log('Hallo Abdelbasset, hier spricht dein personalisierter MS-5');
 
-//Userinput für die App-Bewertung ermöglichen
 const readline = require('readline');
-const readl = readline.createInterface({input: process.stdin, output: process.stdout});
+const read = readline.createInterface({input: process.stdin, output: process.stdout});
 
-//Die zu deklarierende Werte
-const maxRating = 5.0; //maximale Note
-var numOfRating = 0; //Anzahl der Bewertungen
-var userRating = 0;  //Nutzerbewertung für die durchschnittliche Bewertung
-var totalRating = userRating / numOfRating; //Durschnittliche Bewertung
-
-var ratingName = 'Rating number: ';
-var idRatings = 0;
-var myRatings = [];
-
-//Ausgabe der Variablen
-function output()
+function getRandomInt(max)
 {
-    console.log('The ammount of rating is' + numOfRating);
-    console.log('The maximal rating is' + maxRating);
-    console.log('The average rating is' + totalRating);
-    console.log(' ');
+  return Math.floor(Math.random()*Math.floor(max));
 }
-//Bewertung mit Benutzeroberfläche
-//Methode rate() {}
-const rate = () => 
-{
-    return new Promise((resolve, reject)=>{
-        readl.question('Please rate: ', function(answer){
-            if (answer<=maxRating){
-                //Anzahl an Bewertungen wird ausgezählt
-                numOfRating++;
-                //Durchschnittliche Bewertung wird angepasst
-                totalRating = userRating + parseInt(answer);
-                //Bewertungsobjekt
-                let ratings = {ratingName: ratingName + numOfRating,
-                               numOfRating: numOfRating,
-                               indRatings: parseInt(answer),
-                                ratingTool: () => {return this.totalRating=(userRating/numOfRating);}};
-                                myRatings.push(ratings);
-                                console.log("The ammount of ratings is: " + myRatings.length);
-                                console.log("The total rating is:" + ratings.idRatings);
-                                totalRating = ratings.ratingTool();
 
-                                console.log(ratings.ratingName);
-                                console.log("Rating Tool: " + ratings.ratingTool());
-            }
-            else{
-                console.log("False input! Try again.");
-            }
-            resolve(); 
-        });
-    })
-}
-//Huch!? Die zufällige Bewertung
-function random()
+var max_Bewertung = 5;
+var anzahl_Bewertung = 0;
+var bewertung = 0;
+
+const main = function()
 {
-    for ( let i=0; i<5; i++)
+  read.question('1 -> um selber eine Bewertung angeben\n'+'2 -> um Zufaellige Bewertung abgeben\n', function(x)
+  {
+
+      switch(parseInt(x))
+      {
+            case 1:
+                    me(log);
+                    break;
+
+            case 2:
+                    random(log);
+                    break;
+
+            default:
+                    console.log('Falsche Eingabe!');
+                    break;
+      }
+  })
+}
+
+//Zufalls Werte
+const random = function(callback)
+{
+  var random;
+  for (var i= 1; i <= 20; i++)
+  {
+    random = getRandomInt(6);
+    bewertung += random;
+    console.log('Person '+i+' hat '+random+' Sterne gegeben');
+  }
+  callback(('Die App hat '+Math.round(bewertung/i*10)/10+' von '+max_Bewertung+' Sternen'));
+
+  read.close();
+}
+
+const log = function(message)
+{
+  console.log(message);
+}
+
+const calculate = myArr =>
+{
+    const sum = myArr.reduce((total, amount)=> total + amount);
+    const cal = sum / myArr.length;
+
+    console.log('Die Durchschnittliche Bewertung ist '+ Math.round(cal);
+};
+
+var question = (q) =>
+{
+  return new Promise((res,rej)=>
+  {
+    read.question(q, answer =>
+      {
+        res(answer);
+      })
+  });
+};
+
+const me = async function eingabe(callback)
+{
+  var x;
+  const myArr = [];
+
+  while(x != 'quit')
+  {
+  x = await question('Was ist Ihre Bewertung?\n')
     {
-        var y = Math.round((Math.random()*(4)+1));
-        //Bewertung hinzufügen-->(+1)
-        numOfRating++;
-        //Durchschnitt erneuern | Gesamtbewertung (Get an update boi)
-        userRating = userRating + y;
-        //Bewertungs-Objekt (update)
-        let ratings = {ratingName: ratingName + numOfRating, numOfRating: numOfRating, idRatings: y, ratingTool: ()=> {return this.totalRating = (userRating/numOfRating);}};
+      switch(x)
+      {
+        case '1':
+                myArr.push(1);
+                break;
+        case '2':
+                myArr.push(2);
+                break;
+        case '3':
+                myArr.push(3);
+                break;
+        case '4':
+                myArr.push(4);
+                break;
+        case '5':
+                myArr.push(5);
+                break;
+        case 'calc':
+                  calculate(myArr);
+                  break;
+        case 'count':
+                    callback(myArr);
+                    break;
+        default:
+              console.log('Falsche Eingabe');
+              break;
+      }//switch
+    }//while
+  } //fun2
+  read.close();
+}//func1
 
-        totalRating=ratings.ratingTool();
-        console.log(ratings.ratingName);
-        myRatings.push(ratings);
-
-        console.log("The ammount of ratings is: " + myRatings.length);
-        console.log("The total rating is:" + ratings.idRatings);
-        console.log("Rating Tool: " + ratings.ratingTool());
-     output();
-    }
-}
-//zufällige Bewertung by x
-//Methode mit const()
-
-const randomxRating=()=>{
-    return new Promise((resolve, reject)=>{
-        readl.question("How many ratings you wanna output?", function(answer){
-            var ammountRatings = parseInt(answer);
-            for(let x=0; x<ammountRatings; x++)
-            {
-                //Random value generator
-                var y = Math.round((Math.random() * (4) + 1));
-                //Ammount +1
-                numOfRating++;
-                //Schnitt wird erneuert
-                userRating = userRating + y;
-                //Bewertungs-Objekt
-                let ratings={
-                    ratingName: ratingName + userRating,
-                    userRating: userRating,
-                    idRatings: y,
-                    ratingTool : () => {return this.totalRating=(userRating/numOfRating);}
-                };
-                myRatings.push(ratings);
-                console.log("The ammount of ratings is: " + myRatings.length);
-                console.log("This is rating: " + ratings.ratingTool());
-            output();    
-            }
-        resolve();
-        });
-    })
-}
-const main = async () =>
-{
-    await rate()
-    await randomxRating()
-    readl.close()
-}
 main();
-
