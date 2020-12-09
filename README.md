@@ -10,6 +10,7 @@ Goutham Sriharan <br>
 23.11.20 <br> Domänenmodell <br>
 30.11.20 <br> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept <br>
 07.12.20 <br> Ideenerweiterung | Readme aktuallisiert | Klassenmodell/Domainmodell/RESTbucks angepasst |<br>
+09.12.20 <br> Domainmodell | Restmodell | Klassenmodell | Project noch mit einer Payment Idee erweitert | <br>
 
 
 # Project Description
