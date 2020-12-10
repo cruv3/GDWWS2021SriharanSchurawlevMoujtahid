@@ -30,12 +30,14 @@ Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarant
 9. View Historie(Historie, GET)
 
 # Domänenmodell
-## 1.0
-![alt text](https://i.ibb.co/416gGj2/Domain.png)
-<a href="https://github.com/cruve3/GDWWS2021SriharanSchurawlevMoujtahid/Projekt/pdf/Domainmodel.pdf" class="image fit" ><img src="images/marr_pic.jpg" alt=""></a>
+## 1.1
+![alt text](https://i.ibb.co/hFvddJc/Domain.png)
+PDF in Projekt Folder
 # Klassenmodell
 ## 1.0
-![alt text](https://i.ibb.co/RjycsrX/Klassenmodell.png)
+![alt text](https://i.ibb.co/L0rbz2T/Klassenmodell.png)
+PDF in Projekt Folder
 # Restbucks
-## 1.0
-![alt text](https://i.ibb.co/0Y1VtB3/Restbucks.png)
+## 1.1
+![alt text](https://i.ibb.co/gWKNW2w/Restbucks.png)
+PDF in Projekt Folder
