@@ -1,4 +1,4 @@
-![alt text](https://i.ibb.co/q18TT2M/Mart.png)<br>
+![alt text](https://i.ibb.co/rykBvnd/Mart.png)<br>
 
 # Group Members
 Andreas Schurawlev <br>
