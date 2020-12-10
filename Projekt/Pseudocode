@@ -1,4 +1,4 @@
-#Scenario:
+# Scenario:
 1.	User registriert sich
 2.	User loggt sich ein
 4.	User gibt Artikelnummer/Produkt in suchleiste ein
@@ -8,7 +8,7 @@
 7.	User prueft in der Historie nach dem Produkt
 
 
-#Scenario 2:
+# Scenario 2:
 1.	Zeit vergeht, 1 Jahr
 2.	Produkt geht kaputt
 3.	Loggt sich ein
@@ -16,7 +16,7 @@
 5.	Waelt Defektes Produkt aus
 6.	Klickt button um zum Kundenservice vom Haendler zu gelangen
 
-#Pseudo-Code:
+# Pseudo-Code:
 
 //Scenario Pseudocode
 begin
@@ -37,8 +37,7 @@ end
 
 		
 	
-
-// Register Pseudocode
+## Register Pseudocode
 begin
 
 valid_input_username := false
@@ -86,8 +85,7 @@ print(“Enter password”)
 	end if
 end
 
-
-// Login Pseudocode
+## Login Pseudocode
 begin
 
 	valid_input_username := false
