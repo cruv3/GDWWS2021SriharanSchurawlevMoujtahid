@@ -11,7 +11,7 @@ Goutham Sriharan <br>
 30.11.20 <br> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept <br>
 07.12.20 <br> Ideenerweiterung | Readme aktuallisiert | Klassenmodell/Domainmodell/RESTbucks angepasst |<br>
 09.12.20 <br> Domainmodell | Restmodell | Klassenmodell | Projekt noch mit einer Payment Idee erweitert | <br>
-10.12.20 <br> Domainmodell | Klassenmodell | RESTBucks (General Update from 1.0 to 1.1) | Wiki fertiggestellt <br> | APIs hinzugefuegt
+10.12.20 <br> Domainmodell | Klassenmodell | RESTBucks (General Update from 1.0 to 1.1) | Wiki fertiggestellt  | APIs hinzugefuegt<br>
 ERSTE DEADLINE ERREICHT | FERTIG!!!!
 
 
