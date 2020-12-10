@@ -10,7 +10,8 @@ Goutham Sriharan <br>
 23.11.20 <br> Domänenmodell <br>
 30.11.20 <br> Neue Idee | Domänenmodell angepasst | Klassenmodell | RESTbucks | Description | Scenario | Proof of Concept <br>
 07.12.20 <br> Ideenerweiterung | Readme aktuallisiert | Klassenmodell/Domainmodell/RESTbucks angepasst |<br>
-09.12.20 <br> Domainmodell | Restmodell | Klassenmodell | Project noch mit einer Payment Idee erweitert | <br>
+09.12.20 <br> Domainmodell | Restmodell | Klassenmodell | Projekt noch mit einer Payment Idee erweitert | <br>
+10.12.20 <br> Domainmodell | Klassenmodell | RESTBucks (General Update from 1.0 to 1.1)
 
 
 # Project Description
@@ -20,9 +21,13 @@ Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarant
 ## Basic scenario:
 1. Create User(Users,POST)
 2. Log in(Token, POST)
-3. ViewProduct(Menu, GET)
-4. Order(Order, POST)
-5. View Historie(Historie, GET)
+3. SearchProduct(Menu, GET)
+4. PlaceOrder(Order, POST)
+5. GetPreis (Payment, GET)
+6. Pay (Payment, PUT)
+7. GetRechnung (Menu, PUT)
+8. Historie (Rechnung, PUT)
+9. View Historie(Historie, GET)
 
 # Domänenmodell
 ## 1.0
