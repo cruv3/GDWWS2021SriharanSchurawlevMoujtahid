@@ -32,6 +32,7 @@ Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarant
 # Domänenmodell
 ## 1.0
 ![alt text](https://i.ibb.co/416gGj2/Domain.png)
+<a href="https://github.com/cruve3/GDWWS2021SriharanSchurawlevMoujtahid/Projekt/pdf/Domainmodel.pdf" class="image fit" ><img src="images/marr_pic.jpg" alt=""></a>
 # Klassenmodell
 ## 1.0
 ![alt text](https://i.ibb.co/RjycsrX/Klassenmodell.png)
