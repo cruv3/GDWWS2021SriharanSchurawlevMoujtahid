@@ -35,7 +35,7 @@ Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarant
 PDF in Projekt Folder
 # Klassenmodell
 ## 1.1
-![alt text](https://i.ibb.co/L0rbz2T/Klassenmodell.png)<br>
+![alt text](https://i.ibb.co/0hPT8dP/Klassenmodell.jpg)<br>
 PDF in Projekt Folder
 # Restbucks
 ## 1.1
