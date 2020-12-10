@@ -31,13 +31,13 @@ Mit dem Online-Preisvergleich Portal Waracheck können Sie auf die Produktgarant
 
 # Domänenmodell
 ## 1.1
-![alt text](https://i.ibb.co/hFvddJc/Domain.png)
+![alt text](https://i.ibb.co/hFvddJc/Domain.png)<br>
 PDF in Projekt Folder
 # Klassenmodell
-## 1.0
-![alt text](https://i.ibb.co/L0rbz2T/Klassenmodell.png)
+## 1.1
+![alt text](https://i.ibb.co/L0rbz2T/Klassenmodell.png)<br>
 PDF in Projekt Folder
 # Restbucks
 ## 1.1
-![alt text](https://i.ibb.co/gWKNW2w/Restbucks.png)
+![alt text](https://i.ibb.co/gWKNW2w/Restbucks.png)<br>
 PDF in Projekt Folder
