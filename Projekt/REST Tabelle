@@ -98,7 +98,7 @@ Primärressource wäre ein registrierter User und Subressource ein Gast, doch ei
 
 
 
-x1 https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
-x2 https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
+https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
 
 
