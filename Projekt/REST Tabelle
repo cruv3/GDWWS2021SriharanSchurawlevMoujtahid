@@ -13,77 +13,80 @@
 #Historie
 | Ressource      | Methode | Semantik                                | Conten-type(req) | Content-type(res) | HTTP StatuscoQdes |
 | -------------- | ------- | --------------------------------------- | ---------------- | ----------------- | ----------------- |
-| /Historie      | GET     | Gibt alle Historien aus                 |                  | Applikation/Json  | 200,500           |
-| /Historie/{id} | GET     | Infomrationen einer bestimmten Historie |                  | Applikation/Json  | 200,404,500       |
-| /Historie      | Post    | Fügt einen Historie hinzu               | Applikation/Json | Applikation/Json  | 200,201,500       |
+| /Historie      | GET     | Gibt alle Rechnungen aus                |                  | Applikation/Json  | 200,500           |
+| /Historie/{id} | GET     | Informationen einer bestimmten Rechnung |                  | Applikation/Json  | 200,404,500       |
+| /Historie      | Post    | Fügt eine Rechnung hinzu                | Applikation/Json | Applikation/Json  | 200,201,500       |
 | /Historie/{id} | PUT     | Aktualisiert die Historie               | Applikation/Json | Applikation/Json  | 200,201,204,500   |
-| /Historie/{id} | DELETE  | Löscht Historie                         | Applikation/Json |                   | 200,500           |
+| /Historie/{id} | DELETE  | Löscht Rechnung                         | Applikation/Json |                   | 200,500           |
 
+#Produkt
+| Ressource      | Methode | Semantik                                | Conten-type(req) | Content-type(res) | HTTP StatuscoQdes |
+| -------------- | ------- | --------------------------------------- | ---------------- | ----------------- | ----------------- |
+| /Produkt       | GET     | Gibt alle Produkte aus                  |                  | Applikation/Json  | 200,500           |
+| /Produkt/{id}  | GET     | Informationen eines bestimmten Produktes|                  | Applikation/Json  | 200,404,500       |
+| /Produkt       | Post    | Fügt einen Produkt hinzu                | Applikation/Json | Applikation/Json  | 200,201,500       |
+| /Produkt/{id}  | PUT     | Aktualisiert die Produktliste           | Applikation/Json | Applikation/Json  | 200,201,204,500   |
+| /Produkt/{id}  | DELETE  | Löscht Produkt                          | Applikation/Json |                   | 200,500           |
 
 #Ressourcen
 Die Ressourcendefinition wurde von unserem überarbeitetem Domainmodell sowie unserer Projektbeschreibung abgeleitet.
 
-Ein Kunde fügt sein Produkt in die Historie ein, kann diese daraufhin Prüfen, die Rechnung hinzufuegen und bei defekt des Produktes einen Fehler melden.
+Ein Kunde loggt sich ein, sucht oder filtert ein bestimmtes Produkt, wählt das gewünschte Produkt von einen bestimmten Anbieter aus, bestellt das Produkt, 
+Kunde wird zum Onlineshop vom Anbieter weitergeleitet, führt die Zahlungsabwicklung durch und erhält eine Rechnung die in der Historie gespecihert wird - und immer wieder
+aufrufbar ist.
 
-
-
-•	Nutzer
+•	User
     o	Vor/Nachname
     o	ID
     o	Alter
     o	Username
+    o	Adresse
+    o 	Payment method
 
-•	Produkte
+•	Produkt
     o	ID
-    o	Art
+    o	Kategorie
     o	Preis
-    o	Gewicht
-    o	Standartmenge
-
-•	OnlineShop
+    o	Herstellergarantie
+    
+•	Online-Shop
     o	ID
-    o	Öffnungszeiten
-    o	Produkte
+    o	Produkt
+    o	Zusatzgarantie
+
+
+•	Rechnung
+    o	ID
+    o	Produkt
+    o	Einkaufsdatum
+    o	Gesamtgarantiedauer
+
 
 •	Historie
     o	ID
-    o	Produkt
     o	Rechnung
-    o	Garantie
+    
 
-#Path / Quarry parameter und Primär-/Subressourcen sowie Listenresourcen.
-Wir Benutzen Quarry-parameter, um z.b in Items nach Produkten einer Bestimmten Art zu suchen.
+#Path / Quarry parameter und Primär-/Subressourcen sowie Listenressourcen.
+Wir Benutzen Quarry-parameter, um z.b im Interface nach Produkten einer Bestimmten Produkt-Kategorie zu suchen.
 Der Server liefert dann eine Liste aller Produkten, die mit der Art übereinstimmen.
+In unserem System gehen wir davon aus , dass sich der User registriert um auf seine Historie zuzugreifen, doch er kann auch als Gast die Produkte bei uns kaufen.
+Primärressource wäre ein registrierter User und Subressource ein Gast, doch ein Gast hat nicht Zugriff auf alle Funktionen (weniger sinnvoll).
+
+
 
 
 #REST-Prinzipien
-„REST APIs must be hypertext-driven“ betont Roy Fielding in einem Blog-Beitragx1 und um das zu schaffen orientierten wir und am Richardson Maturity Modelx2, Dabei haben wir folgende Punkte umgesetzt:
+„REST APIs must be hypertext-driven“ betont Roy Fielding in einem Blog-Beitragx1 und um das zu schaffen orientierten wir uns am Richardson Maturity Modelx2, Dabei haben wir folgende Punkte umgesetzt:
 1.	Jede Ressource hat seine eigene URL
 2.	Jede Ressource hat eine oder mehrere Repräsentationen vorgesehen, die über das Internet übertragen werden können
 3.	In jeder REST- Nachricht sind alle Informationen enthalten, die der Server/Client benötigt, um die Nachricht richtig interpretieren zu können.
-beim Austausch von Nachricht werden keine Informationen über den Zustand gespeichert
+	beim Austausch von Nachricht werden keine Informationen über den Zustand gespeichert
 4.	Alle Ressourcen haben ein gleichmäßigen Satz von CRUD-Operationen (Create, Read, Update, Delete)
 5.	Hypermedia Mit der Repräsentation einer Ressource wird auch auf Links anderer Ressourcen-Entitäten referenziert, die für den Ablauf des weiteren Dialoges wichtig sind
 
 
-#REST Alternative
-Als alternative zu REST gibt es GraphQL, eine von Facebook entwickelte SQL-ähnliche Laufzeitumgebung, die seit 2017 eine OWFa-1.0 Lizenz besitzt (Open Web Fundation).
-Aus mehreren Webseiten konnte man rauslesen, dass GraphQL eine ernstzunehmende Alternative zu Rest sein kann, da man mit einem einzigen Quarry Zugriff auf alle genwünschten Daten zugreifen kann was bei der steigenden Komplexität der heutigen Web Applikationen von großem Vorteil sein kann.
-Die GraphQL-Serverinstanz liefert bei einer Abfrage nur die exakt definierten Informationen damit nicht mehr Daten als benötigt über die Schnittstelle versendet werden.
-Aus diesem Grund wird GraphQL auch als wesentlich präziser und effizienter als REST betitelt.
-Was sich zuerst schön und gut anhört kann im Nachhinein zu Starken Sicherheitsproblemem führen da man bei Offene APIs das Abfrageverhalten nicht kontrollieren kann.
-Deshalb kann es passieren, dass durch eine zu hohe Anzahl von Quarry der Server in die Knie geht.
-Was auch noch zu erwähnen ist, ist dass die Implementierung eines Caching-Verfahrens für nicht veränderliche abfragen Komplexer als mit REST ist, da REST durch die Chaching-Methoder der http-Spezifikation zwischenspeichert.
-
 #Benutzte HTTP Statuscodes
-
-Code	Bedeutung	Erläuterung
-200	OK	Die Anfrage wurde erfolgreich verarbeitet, die Antwort enthält weitere Informationen
-201	Created	Die Anfrage wurde erfolgreiche verarbeitet und als Ergebnis wurde eine neue Ressource angelegt, deren URI sich in einem Location-Header befindet
-204	No content	Der Server liefert nur Metadaten, Keine Dateien
-404	Not found	Der Server kennt keine Ressource mit dieser URI
-500	Internal Server Error	Ein nicht näher spezifischer interner Fehler ist bei der Verarbeitung im Server aufgetreten. Dies ist der „harmloseste“ aller Fehlermeldungen – sie erlaubt dem Clienten keinerlei Rückschluss auf die Art des Fehlers.
-
 | Code | Bedeutung             | Erläuterung                                                                                                                                                                                                            |
 | 200  | Ok                    | Die Anfrage wurde erfolgreich verarbeitet, die Antowrt enthält weiter Informationen                                                                                                                                    |
 | 201  | Created               | ie Anfrage wurde erfolgreiche verarbeitet und als Ergebnis wurde eine neue Ressource angelegt, deren URI sich in einem Location-Header befindet                                                                        |
